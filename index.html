@@ -448,8 +448,7 @@
             </div>
 
             <!-- VSL -->
-            <div style="position:relative;padding-top:56.25%;"><iframe id="panda-877e5b8a-8e03-41c4-87f6-82859aff" src="https://player-vz-49784e87-786.tv.pandavideo.com.br/embed/?v=877e5b8a-8e03-41c4-87f6-82859affa559" style="border-radius: 5px;position:absolute;top:0;left:0;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
-                    allowfullscreen=true width="100%" height="100%"></iframe></div>
+            <div style="position:relative;padding-top:56.25%;"><iframe id="panda-2c54fb25-9810-455f-a0a8-0a2cbfe68b01" src="https://player-vz-49784e87-786.tv.pandavideo.com.br/embed/?v=2c54fb25-9810-455f-a0a8-0a2cbfe68b01" style="border:none;position:absolute;top:0;left:0;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="100%" height="100%"></iframe></div>
             <!-- VSL -->
 
             <div class="description-16578141835486qxbNr">
@@ -672,14 +671,14 @@
     </div>
     <!-- PANDA -->
     <style>
-        .panda {
+        .pand {
             display: none
         }
     </style>
     <script>
         const SECONDS_TO_DISPLAY = 1620;
         const CLASS_TO_DISPLAY = 'panda';
-        const IFRAME_ID = 'panda-877e5b8a-8e03-41c4-87f6-82859affa'
+        const IFRAME_ID = 'panda-2c54fb25-9810-455f-a0a8-0a2cbfe68b01'
         const API_ENDPOINT = 'https://player.pandavideo.com.br/api.v2.js'
 
         if (!document.querySelector(`script[src='${API_ENDPOINT}']`)) {
@@ -718,55 +717,6 @@
         })
     </script>
     <!-- PANDA -->
-
-    <!-- VTURB -->
-    <style>
-        .esconder {display:none}
-    </style>
-    
-    <script type="text/javascript">
-      window.onload = function () {
-        /* ALTERE O VALOR 10 PARA OS SEGUNDOS EM QUE AS SEÇÕES VÃO APARECER */
-        var SECONDS_TO_DISPLAY = 1620;
-        var CLASS_TO_DISPLAY = ".esconder";
-    
-        /* DAQUI PARA BAIXO NAO PRECISA ALTERAR */
-        var attempts = 0;
-        var elsHiddenList = [];
-        var elsDisplayed = false;
-        var elsHidden = document.querySelectorAll(CLASS_TO_DISPLAY);
-        var alreadyElsDisplayed = localStorage.getItem('alreadyElsDisplayed');
-    
-        setTimeout(function () { elsHiddenList = Array.prototype.slice.call(elsHidden); }, 0);
-    
-        var showEls = function () {
-          elsDisplayed = true;
-          elsHiddenList.forEach((e) => e.style.display = "block");
-          localStorage.setItem('alreadyElsDisplayed', true)
-        }
-    
-        var startWatchVideoProgress = function () {
-          if (typeof smartplayer === 'undefined' && !(smartplayer.instances && smartplayer.instances.length)) {
-            attempts += 1;
-            if (attempts >= 10) return;
-            return setTimeout(function () { startWatchVideoProgress() }, 1000);
-          }
-    
-          smartplayer.instances[0].on('timeupdate', () => {
-            if (elsDisplayed || smartplayer.instances[0].video.currentTime < SECONDS_TO_DISPLAY) return;
-            showEls();
-          })
-        }
-    
-        if (alreadyElsDisplayed === 'true') {
-          setTimeout(function () { showEls(); }, 100);
-        } else {
-          startWatchVideoProgress()
-        }
-      }
-    </script>
-
-    <!-- VTURB -->
     <script>
         document.addEventListener("contextmenu", function(e) {
             e.preventDefault();
