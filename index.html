@@ -437,13 +437,13 @@
                     
                     @media (max-width: 640px) {
                         .headline-1657813573937dgRfpz-element h1 {
-                            font-size: 7.50vw;
+                            font-size: 6.0vw;
                             text-align: center;
                         }
                     }
                 </style>
                 <div class="headline-1657813573937dgRfpz-element headline">
-                    <h1><span style="color:#00D45F"><b>THE SECRET TECHNOLOGY</b></span>&nbsp;THAT CAN MAKE YOU<span style="color:#00D45F"> RICH</b></span>MAY ALREADY BE HIDDEN<br>– INSIDE YOUR PHONE! –</h1>
+                    <h1><span style="color:#ff0000">THE SECRET TECHNOLOGY</span>&nbsp;<br>THAT CAN MAKE YOU<span style="color:#ff0000"> RICH<br></span> MAY ALREADY BE HIDDEN<br>– INSIDE YOUR PHONE! –</h1>
                 </div>
             </div>
 
@@ -788,30 +788,6 @@
             }
         }
     </script>
-    <!-- UTM -->
-    <script>
-        let prefix = ["https://payment.hotmart.com", "https://pay.hotmart.com"];
-
-        function getParams() {
-            let t = "",
-                e = window.top.location.href,
-                r = new URL(e);
-            if (null != r) {
-                let a = r.searchParams.get("utm_source"),
-                    n = r.searchParams.get("utm_medium"),
-                    o = r.searchParams.get("utm_campaign"),
-                    m = r.searchParams.get("utm_term"),
-                    c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
-            }
-            return t
-        }! function() {
-            var t = new URLSearchParams(window.location.search);
-            t.toString() && document.querySelectorAll("a").forEach(function(e) {
-                for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
-            })
-        }();
-    </script>
-    <!-- UTM -->
 </body>
 
 </html>
