@@ -323,24 +323,25 @@
 <body>
     <style>
         .zooming {
-            animation: zooming 1.25s ease infinite;
+            animation: zooming 1.55s ease infinite;
         }
         
         @keyframes zooming {
             0% {
-                transform: scale(1, 1);
+                transform: scale(0.9, 0.9);
             }
             50% {
-                transform: scale(1.1, 1.1);
+                transform: scale(1, 1);
             }
             100% {
-                transform: scale(1, 1);
+                transform: scale(0.9, 0.9);
             }
         }
     </style>
     <div class="division-1657813287709__wrapper">
         <style>
             #division-1657813287709 {
+                max-width: 100%;
                 z-index: 100000;
                 position: fixed;
                 padding: 3vh 0vw 3vh 0vw;
